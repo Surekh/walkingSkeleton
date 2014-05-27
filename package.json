@@ -1,6 +1,6 @@
 {
 	"version": "0.0.0",
-	"name": "walking skeleton",
+	"name": "walkingSkeleton",
 	"description": "A simple walking skeleton for node.js and AngularJS app",
   	"repository": "https://github.com/Surekh/walkingSkeleton",
   	"license": "MIT"
