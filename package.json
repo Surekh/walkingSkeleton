@@ -1,0 +1,18 @@
+{
+  "name": "walkingSkeleton",
+  "version": "0.0.0",
+  "description": "simple walking skeleton for node.js and AngularJS app",
+  "main": "index.js",
+  "scripts": {
+    "test": "./run_test.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Surekh/walkingSkeleton.git"
+  },
+  "author": "Surekha Rao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Surekh/walkingSkeleton/issues"
+  }
+}
