@@ -17,8 +17,20 @@ module.exports = function(grunt) {
 				node: true,
 				trailing: true
 			}
+		},
+		browserify: {
+			standalone: {
+				src: [ '<%= pkg.name %>.js' ],
+				dest: 'dist/<%= pkg.name %>.standalone.js',
+				options: {
+					standalone: '<%= pkg.name %>'
+				}
+			}
 		}
 	});
+	
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.registerTask('default',['jshint']);
+	grunt.loadNpmTasks('grunt-browserify');
+
+	grunt.registerTask('default',['jshint','browserify']);
 };
