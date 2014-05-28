@@ -18,14 +18,24 @@ module.exports = function(grunt) {
 					standalone: '<%= pkg.name %>'
 				}
 			}
+		},
+		uglify: {
+			dist: {
+				files: {
+					'dist/<%= pkg.name%>.standalone.min.js':
+						['<%= browserify.standalone.dest %>']
+				}
+			} 
 		}
 	});
 	
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-browserify');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	grunt.registerTask('default',[
 		'jshint',
-		'browserify'
+		'browserify',
+		'uglify'
 	]);
 };
