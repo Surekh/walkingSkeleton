@@ -2,20 +2,12 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		jshint: {
-			files: ['Gruntfile.js','app/js/*'],
+			files: [
+				'**/*.js',
+				'!node_modules/**/*'
+			],
 			options: {
-				quotmark: 'single',
-				camelcase: true,
-				curly: true,
-				eqeqeq: true,
-				indent: true,
-				latedef: true,
-				immed: true,
-				newcap: true,
-				undef: true,
-				unused: true,
-				node: true,
-				trailing: true
+				jshintrc: '.jshintrc'
 			}
 		},
 		browserify: {
@@ -32,5 +24,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-browserify');
 
-	grunt.registerTask('default',['jshint','browserify']);
+	grunt.registerTask('default',[
+		'jshint',
+		'browserify'
+	]);
 };
